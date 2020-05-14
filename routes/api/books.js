@@ -6,6 +6,8 @@ router.route("/")
   .get(booksController.findAll)
   .post(booksController.create);
 
+router.route("/seed").get(booksController.seedData);
+
 // Matches with "/api/books/:id"
 router
   .route("/:id")
